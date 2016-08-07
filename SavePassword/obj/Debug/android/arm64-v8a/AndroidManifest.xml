@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SavePassword.SavePassword" android:versionCode="262145" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="SavePassword" android:icon="@drawable/market" android:theme="@style/CustomActionBarTheme" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Password Saver" android:name="md56c0e82b9b4a3b5e579cded31a00a1ba3.Activity2" />
+    <activity android:label="PasswordSaver" android:name="md56c0e82b9b4a3b5e579cded31a00a1ba3.CreateAccount" />
+    <activity android:label="Password Saver" android:name="md56c0e82b9b4a3b5e579cded31a00a1ba3.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="SavePassword.SavePassword.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.SavePassword.SavePassword" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
