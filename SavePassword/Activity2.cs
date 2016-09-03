@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
 using Newtonsoft.Json;
+using Plugin.FilePicker;
 using SavePassword.Adapters;
 using SavePassword.Animations;
 using SavePassword.Consts;
@@ -47,6 +48,7 @@ namespace SavePassword
 
         private AccountRepository _repository;
         private CryptService _cryptService;
+        private FileService _fileService;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -54,6 +56,7 @@ namespace SavePassword
 
             _repository = new AccountRepository("accounts");
             _cryptService = new CryptService();
+            _fileService = new FileService();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Activity2);
             mListView = FindViewById<ListView>(Resource.Id.listView);
@@ -238,6 +241,22 @@ namespace SavePassword
                     Finish();
                     return true;
 
+                case Resource.Id.exportToExcel:
+                    var result = _fileService.ExportToExcel();
+                    var message = result ? "json файл создан" : "Ошибка при создании файла";
+                    Toast.MakeText(this, message, ToastLength.Short).Show();
+                    return true;
+
+                case Resource.Id.importFromExcel:
+                    Intent intents = new Intent(Intent.ActionOpenDocument);
+                    intents.AddCategory(Intent.CategoryOpenable);
+                    intents.SetType("*/*");
+                    StartActivityForResult(intents, 1);
+
+
+
+                    return true;
+                    
 
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -359,6 +378,13 @@ namespace SavePassword
             }
 
             return items[position];
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+
+            
+            base.OnActivityResult(requestCode, resultCode, data);
         }
     }
 }

@@ -7,6 +7,8 @@ C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\System.Xml.dll
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\System.Xml.Linq.dll
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\Plugin.FilePicker.Abstractions.dll
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\Plugin.FilePicker.dll
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\SQLite-net.dll
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\SQLitePCL.batteries.dll
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\SavePassword\SavePassword\obj\Debug\android\assets\SQLitePCL.raw.dll

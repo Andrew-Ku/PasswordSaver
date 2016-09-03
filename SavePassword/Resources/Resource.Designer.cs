@@ -112,6 +112,12 @@ namespace SavePassword
 			// aapt resource value: 0x7f080005
 			public const int etSearch = 2131230725;
 			
+			// aapt resource value: 0x7f080017
+			public const int exportToExcel = 2131230743;
+			
+			// aapt resource value: 0x7f080018
+			public const int importFromExcel = 2131230744;
+			
 			// aapt resource value: 0x7f080004
 			public const int listView = 2131230724;
 			

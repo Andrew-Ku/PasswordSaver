@@ -18,3 +18,7 @@ SavePassword.Adapters.AccountsAdapter, SavePassword;md560b6c38933b0cbc9dc28889fd
 SavePassword.Adapters.AccountsAdapter, SavePassword, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md560b6c38933b0cbc9dc28889fd8aea55c.AccountsAdapter
 SavePassword.Adapters.AccountsAdapter;md560b6c38933b0cbc9dc28889fd8aea55c.AccountsAdapter
 savepassword.adapters.AccountsAdapter;md560b6c38933b0cbc9dc28889fd8aea55c.AccountsAdapter
+Plugin.FilePicker.FilePickerActivity, Plugin.FilePicker;md520c46725dc61fcf80ec8b8957aac5201.FilePickerActivity
+Plugin.FilePicker.FilePickerActivity, Plugin.FilePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md520c46725dc61fcf80ec8b8957aac5201.FilePickerActivity
+Plugin.FilePicker.FilePickerActivity;md520c46725dc61fcf80ec8b8957aac5201.FilePickerActivity
+plugin.filepicker.FilePickerActivity;md520c46725dc61fcf80ec8b8957aac5201.FilePickerActivity

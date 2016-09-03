@@ -101,6 +101,8 @@ class MonoPackageManager_Resources {
 		"SavePassword.dll",
 		"Java.Interop.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.FilePicker.Abstractions.dll",
+		"Plugin.FilePicker.dll",
 		"SQLite-net.dll",
 		"SQLitePCL.batteries.dll",
 		"SQLitePCL.raw.dll",

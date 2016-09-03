@@ -29,6 +29,8 @@ public final class R {
         public static final int btnPassword=0x7f080010;
         public static final int descriptionEditText=0x7f08000a;
         public static final int etSearch=0x7f080005;
+        public static final int exportToExcel=0x7f080017;
+        public static final int importFromExcel=0x7f080018;
         public static final int listView=0x7f080004;
         public static final int llContainer=0x7f080000;
         public static final int mainView=0x7f08000c;
