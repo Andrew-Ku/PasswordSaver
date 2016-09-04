@@ -66,9 +66,28 @@ namespace SavePassword.Services
 
         }
 
-        public bool ImportFromExcel(string path)
+        public AccountsFileJson ImportFromExcel(string path)
         {
-            return true;
+            var model = new AccountsFileJson();
+
+            try
+            {
+                var file = File.ReadAllText(path);
+                 model = JsonConvert.DeserializeObject<AccountsFileJson>(file);
+
+                foreach (var account in model.Accounts)
+                {
+                    account.Password = _cryptService.DecryptText(account.Password, "test");
+
+                }
+
+                return model;
+            }
+            catch (Exception e)
+            {
+                model.resultMes = "Ошибка чтения файла";
+                return model;
+            }
         }
     }
 }

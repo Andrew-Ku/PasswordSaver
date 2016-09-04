@@ -9,5 +9,7 @@ namespace SavePassword.Models
         public DateTime DocDate { get; set; }
 
         public List<Account> Accounts { get; set; } = new List<Account>();
+
+        public string resultMes { get; set; }
     }
 }

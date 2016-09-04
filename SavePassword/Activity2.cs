@@ -28,6 +28,8 @@ namespace SavePassword
     [Activity(Label = "Password Saver" )]
     public class Activity2 : Activity
     {
+        private const int FILE_PiCK_ACTIVITY = 1; 
+
         private List<Account> mAccounts;
         private ListView mListView;
         private EditText mSearch;
@@ -382,7 +384,20 @@ namespace SavePassword
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
+            switch (requestCode)
+            {
+                case FILE_PiCK_ACTIVITY:
+                    var result = _fileService.ImportFromExcel(data.GetStringExtra("Path"));
+                    if (result.resultMes != string.Empty)
+                    {
+                        Toast.MakeText(this, result.resultMes, ToastLength.Short).Show();
+                        return;
+                    }
 
+                    mAdapter = new AccountsAdapter(this, Resource.Layout.row_account, result.Accounts.OrderBy(a => a.Name).ToList());
+                    mListView.Adapter = mAdapter;
+                    break;
+            }
             
             base.OnActivityResult(requestCode, resultCode, data);
         }
